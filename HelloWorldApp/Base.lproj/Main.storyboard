@@ -19,16 +19,20 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello World" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p4n-W1-pRX">
                                 <rect key="frame" x="100" y="144" width="214" height="49"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="41"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q7J-gh-Ieo">
-                                <rect key="frame" x="60.5" y="717" width="293" height="50"/>
+                                <rect key="frame" x="94.5" y="717" width="225" height="50"/>
                                 <color key="backgroundColor" red="0.64777303479381443" green="0.015857491604417167" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Show greetings">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="greetingButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="TXj-jX-Yvm"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -38,10 +42,13 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="p4n-W1-pRX" secondAttribute="trailing" constant="100" id="W0X-cm-XWf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Q7J-gh-Ieo" secondAttribute="bottom" constant="95" id="dWG-sd-Kc3"/>
                             <constraint firstItem="p4n-W1-pRX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="jsR-ro-7iF"/>
-                            <constraint firstItem="Q7J-gh-Ieo" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.707729" id="n34-48-jgj"/>
                             <constraint firstItem="Q7J-gh-Ieo" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="y0B-Ph-4Ky"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="greetingButton" destination="Q7J-gh-Ieo" id="CE3-DX-Csx"/>
+                        <outlet property="greetingLabel" destination="p4n-W1-pRX" id="tN3-ZN-3pH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
